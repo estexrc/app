@@ -1,4 +1,6 @@
-function Navbar() {
+import CartWidget from "./CartWidget";
+
+const Navbar = () => {
   return (
     <header>
       <span class="material-icons">public</span>
@@ -20,9 +22,12 @@ function Navbar() {
               About
             </a>
           </li>
+          <li>
+            <CartWidget />
+          </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 export default Navbar;
