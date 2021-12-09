@@ -4,6 +4,7 @@
   border: none;
   text-decoration: none;
   list-style: none;
+  font-family: roboto;
 }
 header {
   height: 10vh;
@@ -13,14 +14,13 @@ header {
   align-items: center;
 }
 nav {
-  width: 60%;
+  width: 70%;
 }
 #header-title {
   margin-right: 10vw;
   font-size: 2rem;
   color: #fff;
   font-style: italic;
-  font-family: roboto;
 }
 #header-list {
   display: flex;
@@ -33,5 +33,31 @@ nav {
 .list-link {
   color: #fff;
   font-size: 1.5rem;
-  font-family: roboto;
+}
+
+/* --- PRODUCTS CARD --- */
+#products-container {
+  margin-top: 5vh;
+  text-align: center;
+}
+#card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10vh;
+}
+#card {
+  width: 30%;
+  height: 30vh;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #48cae4;
+  box-shadow: #ade8f4 5px 5px;
+}
+#card-title {
+  font-size: 1.5rem;
+}
+.card-info {
+  font-size: 1.2rem;
 }
