@@ -1,4 +1,4 @@
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Nav/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
