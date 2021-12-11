@@ -1,3 +1,5 @@
+import ItemCount from "./ItemCountFile/ItemCount";
+
 const products = [
   { id: 1, name: "French Fries", price: "$2", stock: 10 },
   { id: 2, name: "Soda", price: "$1.5", stock: 0 },
@@ -15,7 +17,7 @@ const ItemListContainer = ({ props }) => {
               <div id="card">
                 <h3 id="card-title">{product.name}</h3>
                 <h4 className="card-info">Price: {product.price}</h4>
-                <h4 className="card-info">Stock: {product.stock} units</h4>
+                <ItemCount stock={product.stock} initial={1} />
               </div>
             </>
           );
