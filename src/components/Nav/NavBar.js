@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 const Navbar = () => {
   return (
     <header>
-      <span class="material-icons">public</span>
+      <span className="material-icons">public</span>
       <h1 id="header-title">Future e-Comerce</h1>
       <nav>
         <ul id="header-list">
