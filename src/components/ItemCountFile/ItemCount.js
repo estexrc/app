@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./itemCount.css";
 import Swal from "sweetalert2";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   let [contador, setContador] = useState(initial);
 
   const sumar = () => {
@@ -28,14 +28,9 @@ const ItemCount = ({ stock, initial }) => {
     }
   };
 
-  const onAdd = () => {
-    if (stock <= 0) {
-    } else {
-      Swal.fire({
-        icon: "success",
-        text: "Successfully added to cart",
-      });
-    }
+  const addCart = () => {
+    setContador(initial);
+    onAdd();
   };
 
   return (
@@ -49,7 +44,7 @@ const ItemCount = ({ stock, initial }) => {
           -
         </button>
       </div>
-      <button id="add-cart" onClick={onAdd}>
+      <button id="add-cart" onClick={addCart}>
         Add Cart
       </button>
     </>
