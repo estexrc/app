@@ -30,11 +30,3 @@ export default ItemListContainer;
 
 // Quito onAdd por el momento
 // import ItemCount from "./ItemCountFile/ItemCount";
-
-// Utilizo fakestore por ende quito array de objetosetInterval(() => {
-
-// }, const products = [
-//   { id: 1, name: "French Fries", price: "$2", stock: 10 },
-//   { id: 2, name: "Soda", price: "$1.5", stock: 0 },
-//   { id: 3, name: "Cheese Burger", price: "$3", stock: 5 },
-// ];);
