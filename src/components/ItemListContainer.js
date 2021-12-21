@@ -7,7 +7,7 @@ const ItemListContainer = () => {
   let [products, setProducts] = useState([]);
 
   const fetchFakeStore = async () => {
-    const response = await fetch(url);
+    const response = await fetch(url); // `${URL_BASE}/${id}` hay q meter eso
     const responseJSON = await response.json();
     setProducts(responseJSON);
   };
