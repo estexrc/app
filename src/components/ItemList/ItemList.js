@@ -5,14 +5,7 @@ const ItemList = ({ prod }) => {
     <>
       <div id="card-container">
         {prod.map((products) => {
-          return (
-            <Item
-              key={products.id}
-              title={products.title}
-              img={products.image}
-              price={products.price}
-            />
-          );
+          return <Item key={products.id} products={products} />;
         })}
       </div>
     </>

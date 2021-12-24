@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nombre": "Remera hombre lisa",
+    "precio": 550,
+    "descripcion": "Remera 100% algodon lisa varios colores",
+    "stock": 5,
+    "categoria": "1"
+  },
+  {
+    "id": 2,
+    "nombre": "Bermuda hombre",
+    "precio": 850,
+    "descripcion": "Bermuda vestir hombre con bolsillos ocultos",
+    "stock": 10,
+    "categoria": "1"
+  },
+  {
+    "id": 3,
+    "nombre": "Reloj Dama",
+    "precio": 1250,
+    "descripcion": "Reloj de vestir con incrustaciones de diamantes",
+    "stock": 3,
+    "categoria": "2"
+  },
+  {
+    "id": 4,
+    "nombre": "Pulsera Dama",
+    "precio": 1050,
+    "descripcion": "Pulsera bañada en oro 18k",
+    "stock": 7,
+    "categoria": "2"
+  }
+]
