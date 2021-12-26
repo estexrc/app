@@ -5,7 +5,8 @@
     "precio": 550,
     "descripcion": "Remera 100% algodon lisa varios colores",
     "stock": 5,
-    "categoria": "1"
+    "categoria": 1,
+    "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/596/984/products/20681-ada20ac865c5188c0c16202284246670-1024-1024.jpg"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "precio": 850,
     "descripcion": "Bermuda vestir hombre con bolsillos ocultos",
     "stock": 10,
-    "categoria": "1"
+    "categoria": 1,
+    "img": "https://www.kvnstatic.com/productos/07398370/g/07398370-bermuda-hombre-verano-kevingston.jpg"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "precio": 1250,
     "descripcion": "Reloj de vestir con incrustaciones de diamantes",
     "stock": 3,
-    "categoria": "2"
+    "categoria": 2,
+    "img": "https://i.pinimg.com/236x/9a/87/3f/9a873fe7f10cde7e51fd210ac3dcff61.jpg"
   },
   {
     "id": 4,
@@ -29,6 +32,7 @@
     "precio": 1050,
     "descripcion": "Pulsera bañada en oro 18k",
     "stock": 7,
-    "categoria": "2"
+    "categoria": 2,
+    "img": "https://tendenciapulserasdemoda.files.wordpress.com/2018/04/pulsera-dama-de-honor-51.jpg?w=584"
   }
 ]

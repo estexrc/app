@@ -9,16 +9,13 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  const url2 = "https://mocki.io/v1/93b6b749-83ca-4671-bdab-c96edc5c3663";
+  const url2 = "https://mocki.io/v1/cc6c33f2-a454-4135-8401-db1178c7220c";
 
   const consumeApi = async () => {
     const response = await fetch(url2);
     const responseJSON = await response.json();
-    if (id) {
-      return desc.filter((desc) => desc.id === id);
-    } else {
-      return responseJSON;
-    }
+
+    return responseJSON.filter((desc) => desc.id == id);
   };
 
   useEffect(() => {
@@ -28,8 +25,9 @@ const ItemDetailContainer = () => {
         setLoading(false);
       });
     }, 2000);
-    console.log(desc);
   }, [id]);
+
+  console.log(desc);
 
   if (loading) {
     return (

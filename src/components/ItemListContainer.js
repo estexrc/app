@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList/ItemList";
@@ -11,18 +12,17 @@ const ItemListContainer = () => {
 
   console.log(id);
 
-  const url = "https://mocki.io/v1/93b6b749-83ca-4671-bdab-c96edc5c3663";
+  const url = "https://mocki.io/v1/cc6c33f2-a454-4135-8401-db1178c7220c";
 
   const fetchFakeStore = async () => {
     const response = await fetch(url);
     const responseJSON = await response.json();
     if (id) {
-      return products.filter((producto) => producto.categoria === id);
+      return responseJSON.filter((producto) => producto.categoria == id);
     } else {
       return responseJSON;
     }
   };
-
   useEffect(() => {
     setTimeout(() => {
       fetchFakeStore()
@@ -55,18 +55,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-// Quito onAdd por el momento
-// import ItemCount from "./ItemCountFile/ItemCount";
-
-// const fetchFakeStore = async () => {
-//   const response = await fetch(url); // `${URL_BASE}/${id}` hay q meter eso
-//   const responseJSON = await response.json();
-//   setProducts(responseJSON);
-// };
-
-// useEffect(() => {
-//   setTimeout(() => {
-//     fetchFakeStore();
-//   }, 500);
-// });
