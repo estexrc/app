@@ -15,7 +15,7 @@ const ItemDetail = ({ description }) => {
       <div id="card">
         {description.map((desc) => {
           return (
-            <div>
+            <div className="card-container">
               <img src={desc.img} alt="description" className="product-img" />
               <div className="info-container ">
                 <h4 id="card-title">{desc.nombre}</h4>
