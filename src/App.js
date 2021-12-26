@@ -7,8 +7,8 @@ import Home from "./components/Home";
 function App() {
   const links = [
     { href: "/producto", name: "Productos", id: 4 },
-    { href: "/categoria/1", name: "ropa", id: 1 },
-    { href: "/categoria/2", name: "accesorios", id: 2 },
+    { href: "/categoria/1", name: "Ropa", id: 1 },
+    { href: "/categoria/2", name: "Accesorios", id: 2 },
   ];
 
   return (

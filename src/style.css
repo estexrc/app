@@ -15,24 +15,22 @@ header {
 }
 nav {
   width: 70%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: end;
 }
 #header-title {
-  margin-right: 10vw;
+  width: 100%;
+  margin: 0 10%;
   font-size: 2rem;
   color: #fff;
   font-style: italic;
 }
-#header-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.list-item {
-  margin: 2vh 2vw;
-}
-.list-link {
+
+a {
   color: #fff;
-  font-size: 1.5rem;
+  text-decoration: none;
+  margin-left: 16px;
 }
 
 /* --- PRODUCTS CARD --- */
