@@ -3,11 +3,12 @@ import ItemCount from "../ItemCountFile/ItemCount";
 import Swal from "sweetalert2";
 
 const ItemDetail = ({ description }) => {
-  const onAdd = () => {
+  const onAdd = (cantidad) => {
     Swal.fire({
       icon: "success",
       text: "Successfully added to cart",
     });
+    console.log("La cantidad es:" + cantidad);
   };
   console.log(description);
   return (

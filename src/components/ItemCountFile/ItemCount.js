@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const addCart = () => {
     setContador(initial);
-    onAdd();
+    onAdd(contador);
   };
 
   return (
