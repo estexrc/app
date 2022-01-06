@@ -12,9 +12,8 @@ const CustomProvider = ({ children }) => {
   const [cantidad, setCantidad] = useState(0);
   const [cart, setCart] = useState([]);
 
-  const quantity = () => {
-    setCantidad(cantidad + 1);
-    console.log(cantidad);
+  const quantity = (el) => {
+    setCantidad(cantidad + el);
   };
 
   const addCartContext = (newElement) => {
@@ -31,6 +30,7 @@ const CustomProvider = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
+    setCantidad(0);
   };
 
   const valorDelContexto = {
