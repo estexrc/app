@@ -75,3 +75,17 @@ a {
 .info-container {
   width: 60%;
 }
+
+#cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bnt-Cart {
+  width: 15vw;
+  height: 10vh;
+  border: none;
+  border-radius: 5px;
+  background-color: #48cae4;
+  font-size: 2rem;
+}
