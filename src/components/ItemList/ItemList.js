@@ -13,16 +13,3 @@ const ItemList = ({ prod }) => {
 };
 
 export default ItemList;
-
-// Quito onAdd por el momento
-
-// const onAdd = () => {
-//     if (product.stock <= 0) {
-//     } else {
-//       Swal.fire({
-//         icon: "success",
-//         text: "Successfully added to cart",
-//       });
-//     }
-//   };
-// <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
