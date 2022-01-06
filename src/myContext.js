@@ -19,9 +19,11 @@ const CustomProvider = ({ children }) => {
   const addCartContext = (newElement) => {
     const newCart = cart.slice();
 
-    newCart.push(newElement);
-
-    setCart(newCart);
+    if (itemRepeat) {
+    } else {
+      newCart.push(newElement);
+      setCart(newCart);
+    }
   };
 
   const deleteCart = (id) => {
@@ -31,6 +33,16 @@ const CustomProvider = ({ children }) => {
   const clearCart = () => {
     setCart([]);
     setCantidad(0);
+  };
+
+  const itemRepeat = (item) => {
+    let repeat = cart.find((obj) => obj.id === item.id);
+
+    if (repeat) {
+      return true;
+    } else {
+      return false;
+    }
   };
 
   const valorDelContexto = {
