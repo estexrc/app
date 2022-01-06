@@ -1,8 +1,10 @@
+import CustomProvider from "./myContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Carrito from "./components/Carrito";
 
 function App() {
   const links = [
@@ -12,17 +14,20 @@ function App() {
   ];
 
   return (
-    <BrowserRouter>
-      <Navbar links={links} />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/producto" element={<ItemListContainer />} />
-          <Route path="/categoria/:id" element={<ItemListContainer />} />
-          <Route path="/producto/:id" element={<ItemDetailContainer />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <CustomProvider>
+      <BrowserRouter>
+        <Navbar links={links} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/producto" element={<ItemListContainer />} />
+            <Route path="/categoria/:id" element={<ItemListContainer />} />
+            <Route path="/producto/:id" element={<ItemDetailContainer />} />
+            <Route path="/Carrito" element={<Carrito />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </CustomProvider>
   );
 }
 export default App;
