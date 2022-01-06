@@ -20,8 +20,6 @@ const CustomProvider = ({ children }) => {
   const addCartContext = (item, quantity) => {
     const newCart = cart.slice();
 
-    console.log(item, "de aca viene el item");
-
     const itemQuantity = { ...item, cantidad: quantity };
 
     let repeat = newCart.find((obj) => obj.id === item.id);
