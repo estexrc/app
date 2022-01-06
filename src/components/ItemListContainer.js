@@ -33,7 +33,7 @@ const ItemListContainer = () => {
         .catch((err) => {
           console.log(err.message);
         });
-    }, 2000);
+    }, 1000);
   }, [id]);
   console.log(products);
 
