@@ -17,7 +17,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       });
     } else {
       setContador(contador + 1);
-      quantity();
     }
   };
 
@@ -35,6 +34,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const addCart = () => {
     setContador(initial);
     onAdd(contador);
+    quantity(contador);
   };
 
   return (
