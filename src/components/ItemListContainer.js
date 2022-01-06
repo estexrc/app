@@ -10,8 +10,6 @@ const ItemListContainer = () => {
 
   const { id } = useParams();
 
-  console.log(id);
-
   const url = "https://mocki.io/v1/cc6c33f2-a454-4135-8401-db1178c7220c";
 
   const fetchFakeStore = async () => {
@@ -35,7 +33,6 @@ const ItemListContainer = () => {
         });
     }, 1000);
   }, [id]);
-  console.log(products);
 
   if (loading) {
     return (

@@ -27,8 +27,6 @@ const ItemDetailContainer = () => {
     }, 1000);
   }, [id]);
 
-  console.log(desc);
-
   if (loading) {
     return (
       <div id="products-container">
