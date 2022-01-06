@@ -17,48 +17,26 @@ const CustomProvider = ({ children }) => {
 
   const [cart, setCart] = useState([]);
 
-  // const addCartContext = (item, quantity) => {
-  //   const newCart = cart.slice();
-
-  //   console.log(item, "de aca viene el item");
-
-  //   const itemQuantity = { ...item, cantidad: quantity };
-
-  //   let repeat = newCart.find((obj) => obj.id === item.id);
-
-  //   console.log(itemQuantity, "este es itemQuantity");
-
-  //   if (repeat) {
-  //     repeat.cantidad = repeat.cantidad + quantity;
-  //   } else {
-  //     newCart.push(itemQuantity);
-  //   }
-
-  //   setCart(newCart);
-  // };
-
   const addCartContext = (item, quantity) => {
-    //agregar cantidad en producto
+    const newCart = cart.slice();
+
+    console.log(item, "de aca viene el item");
+
     const itemQuantity = { ...item, cantidad: quantity };
 
-    //corroborar con some si el producto se encuentra en cart --
-    const isInCart = cart.some((p) => p.id === item.id);
-    if (!isInCart) {
-      //se agrega el producto completo
-      setCart([...cart, itemQuantity]);
+    let repeat = newCart.find((obj) => obj.id === item.id);
+
+    console.log(itemQuantity, "este es itemQuantity");
+
+    if (repeat) {
+      repeat.cantidad = repeat.cantidad + quantity;
     } else {
-      //si encuentra el producto, se suma la cantidad
-      const addQuantity = cart.find((prod) => prod.id === item.id);
-      //guardo el prod para poder acceder a cantidad y sumar
-
-      addQuantity.cantidad = addQuantity.cantidad + quantity;
-
-      console.log(itemQuantity, "desde itemquantity");
-      console.log(cart, "desde context");
-
-      setCart([...cart]);
+      newCart.push(itemQuantity);
     }
+
+    setCart(newCart);
   };
+
   const deleteCart = (i) => {
     let deleteProduct = cart.find((obj) => obj.id === i.id);
     let index = cart.indexOf(deleteProduct);
