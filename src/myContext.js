@@ -10,24 +10,60 @@ export const useContexto = () => {
 
 const CustomProvider = ({ children }) => {
   const [cantidad, setCantidad] = useState(0);
+
+  // const quantity = (el) => {
+  //   setCantidad(cantidad + el);
+  // };
+
   const [cart, setCart] = useState([]);
 
-  const quantity = (el) => {
-    setCantidad(cantidad + el);
-  };
+  // const addCartContext = (item, quantity) => {
+  //   const newCart = cart.slice();
 
-  const addCartContext = (newElement) => {
-    const newCart = cart.slice();
+  //   console.log(item, "de aca viene el item");
 
-    if (itemRepeat) {
+  //   const itemQuantity = { ...item, cantidad: quantity };
+
+  //   let repeat = newCart.find((obj) => obj.id === item.id);
+
+  //   console.log(itemQuantity, "este es itemQuantity");
+
+  //   if (repeat) {
+  //     repeat.cantidad = repeat.cantidad + quantity;
+  //   } else {
+  //     newCart.push(itemQuantity);
+  //   }
+
+  //   setCart(newCart);
+  // };
+
+  const addCartContext = (item, quantity) => {
+    //agregar cantidad en producto
+    const itemQuantity = { ...item, cantidad: quantity };
+
+    //corroborar con some si el producto se encuentra en cart --
+    const isInCart = cart.some((p) => p.id === item.id);
+    if (!isInCart) {
+      //se agrega el producto completo
+      setCart([...cart, itemQuantity]);
     } else {
-      newCart.push(newElement);
-      setCart(newCart);
+      //si encuentra el producto, se suma la cantidad
+      const addQuantity = cart.find((prod) => prod.id === item.id);
+      //guardo el prod para poder acceder a cantidad y sumar
+
+      addQuantity.cantidad = addQuantity.cantidad + quantity;
+
+      console.log(itemQuantity, "desde itemquantity");
+      console.log(cart, "desde context");
+
+      setCart([...cart]);
     }
   };
-
-  const deleteCart = (id) => {
-    return console.log("hola");
+  const deleteCart = (i) => {
+    let deleteProduct = cart.find((obj) => obj.id === i.id);
+    let index = cart.indexOf(deleteProduct);
+    cart.splice(index, 1);
+    setCart([...cart]);
   };
 
   const clearCart = () => {
@@ -35,19 +71,9 @@ const CustomProvider = ({ children }) => {
     setCantidad(0);
   };
 
-  const itemRepeat = (item) => {
-    let repeat = cart.find((obj) => obj.id === item.id);
-
-    if (repeat) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   const valorDelContexto = {
     cantidad,
-    quantity,
+    // quantity,
     cart,
     addCartContext,
     deleteCart,
