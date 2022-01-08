@@ -4,7 +4,7 @@ import Navbar from "./components/Nav/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Home from "./components/Home";
-import Carrito from "./components/Carrito";
+import Carrito from "./components/cart/Carrito";
 
 function App() {
   const links = [
