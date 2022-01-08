@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
     const response = await fetch(url2);
     const responseJSON = await response.json();
 
-    return responseJSON.filter((desc) => desc.id == id);
+    return responseJSON.find((desc) => desc.id == id);
   };
 
   useEffect(() => {
