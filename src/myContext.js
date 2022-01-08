@@ -11,28 +11,37 @@ export const useContexto = () => {
 const CustomProvider = ({ children }) => {
   const [cantidad, setCantidad] = useState(0);
 
-  // const quantity = (el) => {
-  //   setCantidad(cantidad + el);
-  // };
+  const quantity = (el) => {
+    setCantidad(cantidad + el);
+  };
 
   const [cart, setCart] = useState([]);
 
   const addCartContext = (item, quantity) => {
-    const newCart = cart.slice();
-
     const itemQuantity = { ...item, cantidad: quantity };
 
-    let repeat = newCart.find((obj) => obj.id === item.id);
+    let repeat = cart.find((obj) => obj.id === item.id);
 
     console.log(itemQuantity, "este es itemQuantity");
 
     if (repeat) {
       repeat.cantidad = repeat.cantidad + quantity;
+      setCart([...cart]);
+      console.log(cart, "entro por if");
     } else {
-      newCart.push(itemQuantity);
+      setCart([...cart, itemQuantity]);
+      console.log(cart, "entro x else");
     }
+  };
 
-    setCart(newCart);
+  const deleteOneProduct = (i) => {
+    let deleteOne = cart.find((obj) => obj.cantidad > 1 && obj.id === i.id);
+
+    if (deleteOne) {
+      deleteOne.cantidad = deleteOne.cantidad - 1;
+      const nuevaCantidad = { i, cantidad: deleteOne.cantidad };
+      setCart([...cart]);
+    }
   };
 
   const deleteCart = (i) => {
@@ -48,10 +57,11 @@ const CustomProvider = ({ children }) => {
   };
 
   const valorDelContexto = {
+    quantity,
     cantidad,
-    // quantity,
     cart,
     addCartContext,
+    deleteOneProduct,
     deleteCart,
     clearCart,
   };
