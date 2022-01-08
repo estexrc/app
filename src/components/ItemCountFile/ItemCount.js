@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./itemCount.css";
 import Swal from "sweetalert2";
+import { useContexto } from "../../myContext";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   let [contador, setContador] = useState(initial);
+  const { quantity } = useContexto();
 
   const sumar = () => {
     if (contador >= stock) {
@@ -31,6 +33,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const addCart = () => {
     setContador(initial);
     onAdd(contador);
+    quantity(contador);
   };
 
   return (
