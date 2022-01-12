@@ -38,7 +38,7 @@ const ItemListContainer = () => {
     return (
       <div id="products-container">
         <h1 id="products-title">Our Stock Products</h1>
-        <p>Los productos se estan cargando...</p>
+        <p>Loading products...</p>
       </div>
     );
   } else {
