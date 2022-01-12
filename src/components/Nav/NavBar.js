@@ -3,12 +3,14 @@ import { Link, NavLink } from "react-router-dom";
 import { useContexto } from "../../myContext";
 
 const Navbar = ({ links }) => {
-  const { cantidad } = useContexto();
+  const { cart } = useContexto();
+
+  const totalCart = cart.reduce((acc, item) => acc + item.cantidad, 0);
 
   return (
     <header>
       <Link to="/">
-        <h1 id="header-title">Future e-Comerce</h1>
+        <h1 id="header-title">My Store</h1>
       </Link>
       <nav>
         {links.map((el, index) => {
@@ -21,7 +23,7 @@ const Navbar = ({ links }) => {
         <NavLink to={"/carrito"}>
           <CartWidget />
         </NavLink>
-        {cantidad}
+        {totalCart}
       </nav>
     </header>
   );
