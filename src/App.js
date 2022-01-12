@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Home from "./components/Home";
 import Carrito from "./components/cart/Carrito";
+import Payment from "./components/Payment";
 
 function App() {
   const links = [
@@ -24,6 +25,7 @@ function App() {
             <Route path="/categoria/:id" element={<ItemListContainer />} />
             <Route path="/producto/:id" element={<ItemDetailContainer />} />
             <Route path="/Carrito" element={<Carrito />} />
+            <Route path="/Payment" element={<Payment />} />
           </Routes>
         </main>
       </BrowserRouter>
