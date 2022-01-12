@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContexto } from "../../myContext";
 import ItemCart from "./ItemCart";
 
@@ -24,12 +24,17 @@ const Carrito = () => {
         ))}
 
         {cart.length > 0 ? (
-          <>
-            <p>Total Count: ${totalCount} </p>
-            <button onClick={clearCart} className="bnt-Cart">
-              Clear cart
-            </button>
-          </>
+          <div id="cartInfoFooter">
+            <p id="totalPrice">Total Count: ${totalCount} </p>
+            <div>
+              <NavLink to={"/Payment"}>
+                <button className="bnt-Cart">Finish buy</button>
+              </NavLink>
+              <button onClick={clearCart} className="bnt-Cart">
+                Clear cart
+              </button>
+            </div>
+          </div>
         ) : (
           <>
             <p id="cartEmptyMessage">Your cart is still empty...</p>
