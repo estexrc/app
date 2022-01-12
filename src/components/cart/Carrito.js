@@ -5,6 +5,11 @@ import ItemCart from "./ItemCart";
 const Carrito = () => {
   const { cart, deleteCart, clearCart, deleteOneProduct } = useContexto();
 
+  const totalCount = cart.reduce(
+    (acc, item) => acc + item.precio * item.cantidad,
+    0
+  );
+
   return (
     <>
       <h2 id="cartTitle">¡Hello! I'm your cart</h2>
@@ -19,9 +24,12 @@ const Carrito = () => {
         ))}
 
         {cart.length > 0 ? (
-          <button onClick={clearCart} className="bnt-Cart">
-            Clear cart
-          </button>
+          <>
+            <p>Total Count: ${totalCount} </p>
+            <button onClick={clearCart} className="bnt-Cart">
+              Clear cart
+            </button>
+          </>
         ) : (
           <>
             <p id="cartEmptyMessage">Your cart is still empty...</p>
