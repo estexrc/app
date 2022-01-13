@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./itemCount.css";
 import Swal from "sweetalert2";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   let [contador, setContador] = useState(initial);
+  let [buy, setBuy] = useState(false);
 
   const sumar = () => {
     if (contador >= stock) {
@@ -31,10 +33,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const addCart = () => {
     setContador(initial);
     onAdd(contador);
+    setBuy(true);
   };
 
   return (
-    <>
+    <div id="itemCount">
       <div id="contenedor-contador">
         <button onClick={sumar} className="bnt-Container">
           +
@@ -44,10 +47,24 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           -
         </button>
       </div>
-      <button id="add-cart" onClick={addCart}>
+      <button className="add-cart" onClick={addCart}>
         Add Cart
       </button>
-    </>
+      {buy ? (
+        <button className="add-cart">
+          <Link
+            to="/Carrito"
+            style={{
+              color: "#000",
+            }}
+          >
+            Go Cart
+          </Link>
+        </button>
+      ) : (
+        <div></div>
+      )}
+    </div>
   );
 };
 

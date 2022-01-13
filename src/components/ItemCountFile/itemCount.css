@@ -1,9 +1,14 @@
+#itemCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #contenedor-contador {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
-  margin-left: 25%;
   margin-top: 1vh;
   height: 30%;
   background-color: #ade8f4;
@@ -15,7 +20,7 @@
   margin: 0 2vw;
   font-size: 2rem;
 }
-#add-cart {
+.add-cart {
   width: 50%;
   margin-top: 1vh;
   height: 30%;
