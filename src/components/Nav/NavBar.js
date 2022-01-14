@@ -23,7 +23,7 @@ const Navbar = ({ links }) => {
         <NavLink to={"/carrito"}>
           <CartWidget />
         </NavLink>
-        {totalCart}
+        {totalCart > 0 ? <div id="cartNumber"> {totalCart}</div> : <div></div>}
       </nav>
     </header>
   );

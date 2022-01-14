@@ -139,3 +139,14 @@ a {
   margin: 5vh 0;
   font-size: 2.5rem;
 }
+#cartNumber {
+  padding: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  border-radius: 50%;
+  border: solid #000 2.5px;
+  width: 14px;
+  height: 14px;
+  background-color: red;
+  transform: translate(-10px, -7px);
+}
