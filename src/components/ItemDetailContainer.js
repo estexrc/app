@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "./itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import { db } from "../firebase";
+import { getDoc, doc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   let [desc, setDesc] = useState([]);
@@ -9,22 +11,24 @@ const ItemDetailContainer = () => {
 
   const { id } = useParams();
 
-  const url2 = "https://mocki.io/v1/cc6c33f2-a454-4135-8401-db1178c7220c";
-
-  const consumeApi = async () => {
-    const response = await fetch(url2);
-    const responseJSON = await response.json();
-
-    return responseJSON.find((desc) => desc.id == id);
-  };
-
   useEffect(() => {
-    setTimeout(() => {
-      consumeApi().then((res) => {
-        setDesc(res);
+    const prodCollection = collection(db, "products");
+    const refDoc = doc(prodCollection, id);
+    getDoc(refDoc)
+      .then((snapshop) => {
+        const id = snapshop.id;
+        const data = snapshop.data();
+        const producto = {
+          id: id,
+          ...data,
+        };
+        setDesc(producto);
         setLoading(false);
+      })
+
+      .catch((error) => {
+        console.log(error, "error en IDC");
       });
-    }, 1000);
   }, [id]);
 
   if (loading) {
