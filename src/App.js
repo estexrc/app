@@ -9,9 +9,11 @@ import Payment from "./components/Payment";
 
 function App() {
   const links = [
-    { href: "/producto", name: "Productos", id: 4 },
-    { href: "/categoria/1", name: "Ropa", id: 1 },
-    { href: "/categoria/2", name: "Accesorios", id: 2 },
+    { href: "/products", name: "Products", id: 0 },
+    { href: "/category/men-clothing", name: "Men Clothing", id: 1 },
+    { href: "/category/woman-clothing", name: "Woman Clothing", id: 2 },
+    { href: "/category/electronics", name: "Electronics", id: 3 },
+    { href: "/category/jewelery", name: "Jewelery", id: 5 },
   ];
 
   return (
@@ -21,9 +23,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/producto" element={<ItemListContainer />} />
-            <Route path="/categoria/:id" element={<ItemListContainer />} />
-            <Route path="/producto/:id" element={<ItemDetailContainer />} />
+            <Route path="/products" element={<ItemListContainer />} />
+            <Route path="/category/:name" element={<ItemListContainer />} />
+            <Route path="/products/:id" element={<ItemDetailContainer />} />
             <Route path="/Carrito" element={<Carrito />} />
             <Route path="/Payment" element={<Payment />} />
           </Routes>
