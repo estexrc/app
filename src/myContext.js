@@ -20,10 +20,8 @@ const CustomProvider = ({ children }) => {
     if (repeat) {
       repeat.cantidad = repeat.cantidad + quantity;
       setCart(newCart);
-      console.log(cart, "entro por if");
     } else {
       setCart([...newCart, itemQuantity]);
-      console.log(cart, "entro x else");
     }
   };
 
