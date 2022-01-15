@@ -6,10 +6,9 @@ const Carrito = () => {
   const { cart, deleteCart, clearCart, deleteOneProduct } = useContexto();
 
   const totalCount = cart.reduce(
-    (acc, item) => acc + item.precio * item.cantidad,
+    (acc, item) => acc + item.price * item.cantidad,
     0
   );
-
   return (
     <>
       <h2 id="cartTitle">¡Hello! I'm your cart</h2>
@@ -38,7 +37,7 @@ const Carrito = () => {
         ) : (
           <>
             <p id="cartEmptyMessage">Your cart is still empty...</p>
-            <Link to="/producto">
+            <Link to="/products">
               <button className="bnt-Cart">Go back to products</button>
             </Link>
           </>
