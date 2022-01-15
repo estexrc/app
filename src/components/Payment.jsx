@@ -8,6 +8,12 @@ import { useContexto } from "../myContext";
 
 const Payment = () => {
   const { cart } = useContexto();
+
+  const totalCount = cart.reduce(
+    (acc, item) => acc + item.price * item.cantidad,
+    0
+  );
+
   const sendOrder = () => {
     const order = {
       buyer: {
@@ -17,7 +23,7 @@ const Payment = () => {
       },
       items: { ...cart },
       date: serverTimestamp(),
-      total: 100,
+      total: totalCount,
     };
 
     const db = getFirestore();
