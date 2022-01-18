@@ -27,14 +27,13 @@ const CustomProvider = ({ children }) => {
 
   const deleteOneProduct = (i) => {
     const newCart = [...cart];
-    let deleteOne = newCart.find((obj) => obj.cantidad > 1 && obj.id === i.id);
+    let deleteOne = newCart.find((obj) => obj.id === i.id);
 
-    if (deleteOne) {
+    if (deleteOne.cantidad > 1) {
       deleteOne.cantidad = deleteOne.cantidad - 1;
       setCart(newCart);
     } else {
-      console.log(deleteOne.id);
-      // deleteCart(deleteOne);
+      deleteCart(deleteOne);
     }
   };
 
