@@ -150,3 +150,20 @@ a {
   background-color: red;
   transform: translate(-10px, -7px);
 }
+#paymentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+.paymentInput {
+  border: solid #000 0.5px;
+  border-radius: 3px;
+  margin: 3vh 3vw;
+  height: 3.5vh;
+  width: 30%;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+}
