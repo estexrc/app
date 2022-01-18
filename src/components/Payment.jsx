@@ -7,12 +7,7 @@ import {
 import { useContexto } from "../myContext";
 
 const Payment = () => {
-  const { cart } = useContexto();
-
-  const totalCount = cart.reduce(
-    (acc, item) => acc + item.price * item.cantidad,
-    0
-  );
+  const { cart, totalCount } = useContexto();
 
   const sendOrder = () => {
     const order = {
@@ -35,8 +30,35 @@ const Payment = () => {
 
   return (
     <>
-      <p>Aca se van a mostrar inputs para poner datos del cliente</p>
-      <button onClick={sendOrder}>Finalizar compra</button>
+      <div id="paymentContainer">
+        <p>Aca se van a mostrar inputs para poner datos del cliente</p>
+        <input type="text" placeholder="Name" className="paymentInput"></input>
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="paymentInput"
+          required
+        ></input>
+        <input
+          type="text"
+          placeholder="E-mail"
+          className="paymentInput"
+          required
+        ></input>
+        <input
+          type="text"
+          placeholder="Phone Number"
+          className="paymentInput"
+          required
+        ></input>
+        <input
+          type="text"
+          placeholder="Direction"
+          className="paymentInput"
+          required
+        ></input>
+        <button onClick={sendOrder}>Finalizar compra</button>
+      </div>
     </>
   );
 };

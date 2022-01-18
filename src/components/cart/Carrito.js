@@ -3,12 +3,9 @@ import { useContexto } from "../../myContext";
 import ItemCart from "./ItemCart";
 
 const Carrito = () => {
-  const { cart, deleteCart, clearCart, deleteOneProduct } = useContexto();
+  const { cart, totalCount, deleteCart, clearCart, deleteOneProduct } =
+    useContexto();
 
-  const totalCount = cart.reduce(
-    (acc, item) => acc + item.price * item.cantidad,
-    0
-  );
   return (
     <>
       <h2 id="cartTitle">¡Hello! I'm your cart</h2>

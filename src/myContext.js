@@ -11,6 +11,11 @@ export const useContexto = () => {
 const CustomProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  const totalCount = cart.reduce(
+    (acc, item) => acc + item.price * item.cantidad,
+    0
+  );
+
   const addCartContext = (item, quantity) => {
     const itemQuantity = { ...item, cantidad: quantity };
 
@@ -48,6 +53,7 @@ const CustomProvider = ({ children }) => {
 
   const valorDelContexto = {
     cart,
+    totalCount,
     addCartContext,
     deleteOneProduct,
     deleteCart,
