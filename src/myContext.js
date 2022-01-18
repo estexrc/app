@@ -31,8 +31,10 @@ const CustomProvider = ({ children }) => {
 
     if (deleteOne) {
       deleteOne.cantidad = deleteOne.cantidad - 1;
-      const nuevaCantidad = { i, cantidad: deleteOne.cantidad };
       setCart(newCart);
+    } else {
+      console.log(deleteOne.id);
+      // deleteCart(deleteOne);
     }
   };
 
