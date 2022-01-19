@@ -8,7 +8,7 @@ const Carrito = () => {
 
   return (
     <>
-      <h2 id="cartTitle">¡Hello! I'm your cart</h2>
+      <h2 id="cartTitle">Hello! I'm your cart</h2>
       <div id="cartContainer">
         {cart.map((desc) => (
           <ItemCart
@@ -45,18 +45,3 @@ const Carrito = () => {
 };
 
 export default Carrito;
-// cantidad,
-// return (
-//   <div className="card-container">
-//     <img src={desc.img} alt="description" className="product-img" />
-//     <div className="info-container ">
-//       <h4 id="card-title">{desc.nombre}</h4>
-//       <h5 className="card-info">Precio: ${desc.precio}</h5>
-//       <h5 className="card-info">{desc.descripcion}</h5>
-//       <h5 className="card-info">Cantidad: {desc.cantidad}</h5>
-
-//       <button onClick={deleteOneProduct}>-1</button>
-//       <button onClick={deleteCart}>-</button>
-//     </div>
-//   </div>
-// );
