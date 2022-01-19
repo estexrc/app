@@ -1,11 +1,8 @@
-import CartWidget from "./CartWidget";
 import { Link, NavLink } from "react-router-dom";
 import { useContexto } from "../../myContext";
 
 const Navbar = ({ links }) => {
-  const { cart } = useContexto();
-
-  const totalCart = cart.reduce((acc, item) => acc + item.cantidad, 0);
+  const { totalCount } = useContexto();
 
   return (
     <header>
@@ -21,9 +18,11 @@ const Navbar = ({ links }) => {
           );
         })}
         <NavLink to={"/carrito"}>
-          <CartWidget />
+          <span id="cart-icon" className="material-icons md-light">
+            shopping_cart
+          </span>
         </NavLink>
-        {totalCart > 0 && <div id="cartNumber"> {totalCart}</div>}
+        {totalCount > 0 && <div id="cartNumber"> {totalCount}</div>}
       </nav>
     </header>
   );
