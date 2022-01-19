@@ -50,19 +50,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <button className="add-cart" onClick={addCart}>
         Add Cart
       </button>
-      {buy ? (
+      {buy && (
         <button className="add-cart">
-          <Link
-            to="/Carrito"
-            style={{
-              color: "#000",
-            }}
-          >
+          <Link to="/Carrito" style={{ color: "#000" }}>
             Go Cart
           </Link>
         </button>
-      ) : (
-        <div></div>
       )}
     </div>
   );
