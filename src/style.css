@@ -38,6 +38,11 @@ a {
   margin-top: 5vh;
   text-align: center;
 }
+.titleForContainers {
+  font-size: 2rem;
+  font-style: italic;
+  margin: 5vh;
+}
 .card-container {
   width: 100%;
   height: 95%;
@@ -85,8 +90,8 @@ a {
 }
 #cartTitle {
   text-align: center;
-  font-size: 3.5rem;
-  text-decoration: underline;
+  font-size: 2.5rem;
+  margin: 5vh;
 }
 #cartEmptyMessage {
   margin-top: 10vh;
@@ -159,16 +164,22 @@ a {
   margin-top: 5vh;
 }
 #paymentForm {
-  width: 100%;
-  margin-top: 2vh;
+  width: 60%;
+  margin-top: 3vh;
+  padding-bottom: 3vh;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 .paymentInput {
   border: solid #000 0.5px;
   border-radius: 3px;
   margin: 3vh 3vw;
   height: 3.5vh;
-  width: 30%;
+  width: 60%;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.4rem;
+}
+.paymentSubTitle {
+  font-size: 1.2rem;
 }
