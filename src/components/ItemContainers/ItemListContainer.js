@@ -51,7 +51,7 @@ const ItemListContainer = () => {
     <>
       {loading ? (
         <div className="productsContainer">
-          <h3 className="titleForContainers">Loading our Stock Products...</h3>
+          <h3 className="titleForContainers">Loading our stock Products...</h3>
         </div>
       ) : (
         <div className="productsContainer">
