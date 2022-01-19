@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./itemCount.css";
 import Swal from "sweetalert2";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -38,20 +37,20 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div id="itemCount">
-      <div id="contenedor-contador">
-        <button onClick={sumar} className="bnt-Container">
+      <div id="counterContainer">
+        <button onClick={sumar} className="bntContainer">
           +
         </button>
         <p className="counter">{contador} </p>
-        <button onClick={restar} className="bnt-Container">
+        <button onClick={restar} className="bntContainer">
           -
         </button>
       </div>
-      <button className="add-cart" onClick={addCart}>
+      <button className="addCart" onClick={addCart}>
         Add Cart
       </button>
       {buy && (
-        <button className="add-cart">
+        <button className="addCart">
           <Link to="/Cart" style={{ color: "#000" }}>
             Go Cart
           </Link>
