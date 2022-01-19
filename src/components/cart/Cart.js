@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useContexto } from "../../myContext";
+import { useContexto } from "../../Context/myContext";
 import ItemCart from "./ItemCart";
 
 const Cart = () => {

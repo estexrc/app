@@ -1,7 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCountFile/ItemCount";
 import Swal from "sweetalert2";
-import { useContexto } from "../../myContext";
+import { useContexto } from "../../Context/myContext";
 
 const ItemDetail = ({ description }) => {
   const { addCartContext } = useContexto();
@@ -16,7 +16,7 @@ const ItemDetail = ({ description }) => {
   return (
     <>
       <div id="card">
-        <div className="card-container">
+        <div className="cardContainer">
           <img src={description.img} alt="description" className="productImg" />
           <div className="infoContainer ">
             <h4 className="cardTitle">{description.name}</h4>

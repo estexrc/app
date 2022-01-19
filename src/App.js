@@ -1,4 +1,4 @@
-import CustomProvider from "./myContext";
+import CustomProvider from "./Context/myContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/NavBar";
 import ItemListContainer from "./components/ItemContainers/ItemListContainer";

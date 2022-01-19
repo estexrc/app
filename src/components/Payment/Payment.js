@@ -4,7 +4,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { useContexto } from "../../myContext";
+import { useContexto } from "../../Context/myContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
