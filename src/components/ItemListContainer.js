@@ -39,21 +39,21 @@ const ItemListContainer = () => {
     }
   }, [name]);
 
-  if (loading) {
-    return (
-      <div id="products-container">
-        <h1 id="products-title">Our Stock Products</h1>
-        <p>Loading products...</p>
-      </div>
-    );
-  } else {
-    return (
-      <div id="products-container">
-        <h1 id="products-title">Our Stock Products</h1>
-        <ItemList prod={products} />
-      </div>
-    );
-  }
+  return (
+    <>
+      {loading ? (
+        <div id="products-container">
+          <h1 id="products-title">Our Stock Products</h1>
+          <p>Loading products...</p>
+        </div>
+      ) : (
+        <div id="products-container">
+          <h1 id="products-title">Our Stock Products</h1>
+          <ItemList prod={products} />
+        </div>
+      )}
+    </>
+  );
 };
 
 export default ItemListContainer;

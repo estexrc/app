@@ -31,16 +31,18 @@ const ItemDetailContainer = () => {
       });
   }, [id]);
 
-  if (loading) {
-    return (
-      <div id="products-container">
-        <h1 id="products-title">Our Stock Products</h1>
-        <p>Loading products...</p>
-      </div>
-    );
-  } else {
-    return <ItemDetail description={desc} />;
-  }
+  return (
+    <>
+      {loading ? (
+        <div id="products-container">
+          <h1 id="products-title">Our Stock Products</h1>
+          <p>Loading products...</p>
+        </div>
+      ) : (
+        <ItemDetail description={desc} />
+      )}
+    </>
+  );
 };
 
 export default ItemDetailContainer;
