@@ -38,7 +38,7 @@ const Payment = () => {
       });
     });
 
-    setBuyer({ name: "", lastName: "", phoneNumer: "", email: "" });
+    setBuyer({ name: "", lastName: "", phoneNumber: "", email: "" });
     setCart([]);
   };
 
@@ -47,7 +47,7 @@ const Payment = () => {
       <div id="paymentContainer">
         <p>We're almost done!!</p>
         <p>Please, complete your info</p>
-        <form>
+        <form id="paymentForm">
           <input
             type="text"
             name="name"
@@ -76,7 +76,7 @@ const Payment = () => {
             required
           />
           <input
-            type="number"
+            type="text"
             name="phoneNumber"
             value={buyer.phoneNumber}
             placeholder="Phone Number"
@@ -86,6 +86,7 @@ const Payment = () => {
           />
           <button
             type="submit"
+            className="bnt-Cart"
             onClick={sendOrder}
             disabled={
               !(
@@ -96,7 +97,7 @@ const Payment = () => {
               )
             }
           >
-            Finalizar compra
+            Finish
           </button>
         </form>
       </div>
