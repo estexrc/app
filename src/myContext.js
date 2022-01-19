@@ -53,6 +53,7 @@ const CustomProvider = ({ children }) => {
 
   const valorDelContexto = {
     cart,
+    setCart,
     totalCount,
     addCartContext,
     deleteOneProduct,
