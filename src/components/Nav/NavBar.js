@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useContexto } from "../../myContext";
+import { useContexto } from "../../Context/myContext";
 
 const Navbar = ({ links }) => {
   const { totalCount } = useContexto();
@@ -12,9 +12,9 @@ const Navbar = ({ links }) => {
       <nav>
         {links.map((el, index) => {
           return (
-            <Link key={el.id} to={el.href}>
+            <NavLink key={el.id} to={el.href} className="navLink">
               {el.name}
-            </Link>
+            </NavLink>
           );
         })}
         <NavLink to={"/cart"}>
