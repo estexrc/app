@@ -2,13 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 import { useContexto } from "../../myContext";
 import ItemCart from "./ItemCart";
 
-const Carrito = () => {
+const Cart = () => {
   const { cart, totalCount, deleteCart, clearCart, deleteOneProduct } =
     useContexto();
 
   return (
     <>
-      <h2 id="cartTitle">Hello! I'm your cart</h2>
+      <h3 className="titleForContainers">Hello! I'm your cart</h3>
       <div id="cartContainer">
         {cart.map((desc) => (
           <ItemCart
@@ -24,9 +24,9 @@ const Carrito = () => {
             <p id="totalPrice">Total Count: ${totalCount} </p>
             <div>
               <NavLink to={"/Payment"}>
-                <button className="bnt-Cart">Finish buy</button>
+                <button className="bntCart">Finish buy</button>
               </NavLink>
-              <button onClick={clearCart} className="bnt-Cart">
+              <button onClick={clearCart} className="bntCart">
                 Clear cart
               </button>
             </div>
@@ -35,7 +35,7 @@ const Carrito = () => {
           <>
             <p id="cartEmptyMessage">Your cart is still empty...</p>
             <Link to="/products">
-              <button className="bnt-Cart">Go back to products</button>
+              <button className="bntCart">Go back to products</button>
             </Link>
           </>
         )}
@@ -44,4 +44,4 @@ const Carrito = () => {
   );
 };
 
-export default Carrito;
+export default Cart;
