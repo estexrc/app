@@ -19,6 +19,9 @@ nav {
   display: flex;
   justify-content: end;
 }
+.navLink:active {
+  text-decoration: underline;
+}
 #headerTitle {
   width: 100%;
   margin: 0 10%;
@@ -179,4 +182,34 @@ a {
 }
 .paymentSubTitle {
   font-size: 1.2rem;
+}
+#itemCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#counterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 1vh;
+  height: 30%;
+  background-color: #ade8f4;
+  border-radius: 5px;
+}
+.bntContainer {
+  color: #48cae4;
+  background-color: transparent;
+  margin: 0 2vw;
+  font-size: 2rem;
+}
+.addCart {
+  width: 50%;
+  margin-top: 1vh;
+  height: 30%;
+  background-color: #ade8f4;
+  border-radius: 5px;
+  font-size: 1.4rem;
 }
