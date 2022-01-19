@@ -13,7 +13,7 @@ function App() {
     { href: "/category/men-clothing", name: "Men Clothing", id: 1 },
     { href: "/category/woman-clothing", name: "Woman Clothing", id: 2 },
     { href: "/category/electronics", name: "Electronics", id: 3 },
-    { href: "/category/jewelery", name: "Jewelery", id: 5 },
+    { href: "/category/jewelry", name: "Jewelry", id: 5 },
   ];
 
   return (
