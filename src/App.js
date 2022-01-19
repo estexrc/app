@@ -1,11 +1,11 @@
 import CustomProvider from "./myContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Nav/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import Home from "./components/Home";
+import ItemListContainer from "./components/ItemContainers/ItemListContainer";
+import ItemDetailContainer from "./components/ItemContainers/ItemDetailContainer";
+import Home from "./components/Home/Home";
 import Carrito from "./components/cart/Carrito";
-import Payment from "./components/Payment";
+import Payment from "./components/Payment/Payment";
 
 function App() {
   const links = [

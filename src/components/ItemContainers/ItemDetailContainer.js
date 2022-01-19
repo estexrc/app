@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import ItemDetail from "./itemDetail/ItemDetail";
+import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { getDoc, doc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -35,8 +35,7 @@ const ItemDetailContainer = () => {
     <>
       {loading ? (
         <div id="products-container">
-          <h1 id="products-title">Our Stock Products</h1>
-          <p>Loading products...</p>
+          <h3 className="titleForContainers">Loading our Stock Products...</h3>
         </div>
       ) : (
         <ItemDetail description={desc} />

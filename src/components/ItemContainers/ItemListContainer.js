@@ -1,9 +1,9 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import ItemList from "./ItemList/ItemList";
+import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { getDocs, query, collection, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
@@ -43,12 +43,11 @@ const ItemListContainer = () => {
     <>
       {loading ? (
         <div id="products-container">
-          <h1 id="products-title">Our Stock Products</h1>
-          <p>Loading products...</p>
+          <h3 className="titleForContainers">Loading our Stock Products...</h3>
         </div>
       ) : (
         <div id="products-container">
-          <h1 id="products-title">Our Stock Products</h1>
+          <h3 className="titleForContainers">Our Stock Products</h3>
           <ItemList prod={products} />
         </div>
       )}

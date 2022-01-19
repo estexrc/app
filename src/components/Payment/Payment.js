@@ -4,7 +4,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { useContexto } from "../myContext";
+import { useContexto } from "../../myContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -45,8 +45,8 @@ const Payment = () => {
   return (
     <>
       <div id="paymentContainer">
-        <p>We're almost done!!</p>
-        <p>Please, complete your info</p>
+        <h3 className="titleForContainers">We're almost done!!</h3>
+        <p className="paymentSubTitle">Please, complete your info</p>
         <form id="paymentForm">
           <input
             type="text"
