@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
 import ItemDetail from "../itemDetail/ItemDetail";
+import Swal from "sweetalert2";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebase";
 import { getDoc, doc, collection } from "firebase/firestore";
@@ -27,7 +28,10 @@ const ItemDetailContainer = () => {
       })
 
       .catch((error) => {
-        console.log(error, "error en IDC");
+        Swal.fire({
+          icon: "warning",
+          text: "Something is not working, please try again",
+        });
       });
   }, [id]);
 

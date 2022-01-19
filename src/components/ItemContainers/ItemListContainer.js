@@ -1,7 +1,8 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
+import Swal from "sweetalert2";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebase";
 import { getDocs, query, collection, where } from "firebase/firestore";
@@ -15,20 +16,27 @@ const ItemListContainer = () => {
   useEffect(() => {
     const prodCollection = collection(db, "products");
     const consumeFiBa = (info) => {
-      getDocs(info).then((resultado) => {
-        const docs = resultado.docs;
-        const lista = docs.map((doc) => {
-          const id = doc.id;
-          const data = doc.data();
-          const producto = {
-            id: id,
-            ...data,
-          };
-          return producto;
+      getDocs(info)
+        .then((resultado) => {
+          const docs = resultado.docs;
+          const lista = docs.map((doc) => {
+            const id = doc.id;
+            const data = doc.data();
+            const producto = {
+              id: id,
+              ...data,
+            };
+            return producto;
+          });
+          setProducts(lista);
+          setLoading(false);
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "warning",
+            text: "Something is not working, please try again",
+          });
         });
-        setProducts(lista);
-        setLoading(false);
-      });
     };
 
     if (!name) {
@@ -56,33 +64,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-/* 
-
-  const { id } = useParams();
-
-  const url = "https://mocki.io/v1/cc6c33f2-a454-4135-8401-db1178c7220c";
-
-  const fetchFakeStore = async () => {
-    const response = await fetch(url);
-    const responseJSON = await response.json();
-    if (id) {
-      return responseJSON.filter((producto) => producto.categoria == id);
-    } else {
-      return responseJSON;
-    }
-  };
-  useEffect(() => {
-    setTimeout(() => {
-      fetchFakeStore()
-        .then((res) => {
-          setProducts(res);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    }, 1000);
-  }, [id]);
-
-  */
