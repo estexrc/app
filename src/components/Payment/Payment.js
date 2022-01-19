@@ -86,7 +86,7 @@ const Payment = () => {
           />
           <button
             type="submit"
-            className="bnt-Cart"
+            className="bntCart"
             onClick={sendOrder}
             disabled={
               !(

@@ -52,7 +52,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       </button>
       {buy && (
         <button className="add-cart">
-          <Link to="/Carrito" style={{ color: "#000" }}>
+          <Link to="/Cart" style={{ color: "#000" }}>
             Go Cart
           </Link>
         </button>

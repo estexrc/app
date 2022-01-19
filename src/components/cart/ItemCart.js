@@ -4,20 +4,23 @@ const ItemCart = ({ item, deleteOneProduct, deleteCart }) => {
   return (
     <>
       <div className="cartItem">
-        <img src={item.img} alt="description" className="product-img" />
-        <div className="info-container ">
-          <h4 id="card-title">{item.name}</h4>
-          <h5 className="card-info">{item.description}</h5>
-          <h5 className="card-info">Unity price: ${item.price}</h5>
-          <h5 className="card-info">Quantity: {item.cantidad}</h5>
-          <h5 className="card-info">
+        <img src={item.img} alt="description" className="productImg" />
+        <div className="infoContainer ">
+          <h4 className="cardTitle">{item.name}</h4>
+          <h5 className="cardInfo">{item.description}</h5>
+          <h5 className="cardInfo">Unity price: ${item.price}</h5>
+          <h5 className="cardInfo">Quantity: {item.cantidad}</h5>
+          <h5 className="cardInfo">
             Total price: ${item.price * item.cantidad}
           </h5>
           <div id="cartButtonContainer">
-            <button onClick={deleteOneProduct} className="cartButton">
+            <button
+              onClick={deleteOneProduct}
+              className="cartButtonForDeleteItems"
+            >
               Delete 1
             </button>
-            <button onClick={deleteCart} className="cartButton">
+            <button onClick={deleteCart} className="cartButtonForDeleteItems">
               Delete all
             </button>
           </div>

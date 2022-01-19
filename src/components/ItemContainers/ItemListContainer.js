@@ -42,11 +42,11 @@ const ItemListContainer = () => {
   return (
     <>
       {loading ? (
-        <div id="products-container">
+        <div className="productsContainer">
           <h3 className="titleForContainers">Loading our Stock Products...</h3>
         </div>
       ) : (
-        <div id="products-container">
+        <div className="productsContainer">
           <h3 className="titleForContainers">Our Stock Products</h3>
           <ItemList prod={products} />
         </div>

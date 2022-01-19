@@ -7,7 +7,7 @@ const Navbar = ({ links }) => {
   return (
     <header>
       <Link to="/">
-        <h1 id="header-title">My Store</h1>
+        <h1 id="headerTitle">My Store</h1>
       </Link>
       <nav>
         {links.map((el, index) => {
@@ -17,7 +17,7 @@ const Navbar = ({ links }) => {
             </Link>
           );
         })}
-        <NavLink to={"/carrito"}>
+        <NavLink to={"/cart"}>
           <span id="cart-icon" className="material-icons md-light">
             shopping_cart
           </span>
