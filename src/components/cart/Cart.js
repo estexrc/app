@@ -24,7 +24,7 @@ const Cart = () => {
             <p id="totalPrice">Total Count: ${totalCount} </p>
             <div>
               <NavLink to={"/Payment"}>
-                <button className="bntCart">Finish buy</button>
+                <button className="bntCart">Buy</button>
               </NavLink>
               <button onClick={clearCart} className="bntCart">
                 Clear cart
