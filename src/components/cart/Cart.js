@@ -15,7 +15,7 @@ const Cart = () => {
             key={desc.id}
             item={desc}
             deleteOneProduct={() => deleteOneProduct(desc)}
-            deleteCart={() => deleteCart(desc, desc.cantidad, desc.price)}
+            deleteCart={() => deleteCart(desc)}
           />
         ))}
 

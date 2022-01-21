@@ -14,14 +14,14 @@ const CustomProvider = ({ children }) => {
   const [totalQuan, setTotalQuan] = useState(0);
 
   const addCartContext = (item, quantity) => {
-    const itemQuantity = { ...item, cantidad: quantity };
+    const itemQuantity = { ...item, quantity: quantity };
 
     let newCart = [...cart];
     let repeat = newCart.find((obj) => obj.id === item.id);
     const price = item.price * quantity;
 
     if (repeat) {
-      repeat.cantidad = repeat.cantidad + quantity;
+      repeat.quantity = repeat.quantity + quantity;
       setCart(newCart);
       setTotalPrice(totalPrice + price);
       setTotalQuan(totalQuan + quantity);
@@ -36,8 +36,8 @@ const CustomProvider = ({ children }) => {
     const newCart = [...cart];
     let deleteOne = newCart.find((obj) => obj.id === i.id);
 
-    if (deleteOne.cantidad > 1) {
-      deleteOne.cantidad = deleteOne.cantidad - 1;
+    if (deleteOne.quantity > 1) {
+      deleteOne.quantity = deleteOne.quantity - 1;
       setCart(newCart);
       setTotalPrice(totalPrice - deleteOne.price);
       setTotalQuan(totalQuan - 1);
@@ -46,11 +46,11 @@ const CustomProvider = ({ children }) => {
     }
   };
 
-  const deleteCart = (i, quantity, price) => {
+  const deleteCart = (i) => {
     let deleteProduct = cart.filter((obj) => obj.id !== i.id);
     setCart(deleteProduct);
-    setTotalPrice(totalPrice - quantity * price);
-    setTotalQuan(totalQuan - quantity);
+    setTotalPrice(totalPrice - i.quantity * i.price);
+    setTotalQuan(totalQuan - i.quantity);
   };
 
   const clearCart = () => {
@@ -58,7 +58,7 @@ const CustomProvider = ({ children }) => {
     setTotalPrice(0);
     setTotalQuan(0);
   };
-
+  console.log(totalPrice, totalQuan);
   const valorDelContexto = {
     cart,
     setCart,

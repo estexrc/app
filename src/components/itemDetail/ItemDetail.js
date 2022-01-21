@@ -6,12 +6,12 @@ import { useContexto } from "../../Context/myContext";
 const ItemDetail = ({ description }) => {
   const { addCartContext } = useContexto();
 
-  const onAdd = (cantidad) => {
+  const onAdd = (quantity) => {
     Swal.fire({
       icon: "success",
       text: "Successfully added to cart",
     });
-    addCartContext(description, cantidad);
+    addCartContext(description, quantity);
   };
   return (
     <>

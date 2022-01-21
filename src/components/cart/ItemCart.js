@@ -9,9 +9,9 @@ const ItemCart = ({ item, deleteOneProduct, deleteCart }) => {
           <h4 className="cardTitle">{item.name}</h4>
           <h5 className="cardInfo">{item.description}</h5>
           <h5 className="cardInfo">Unity price: ${item.price}</h5>
-          <h5 className="cardInfo">Quantity: {item.cantidad}</h5>
+          <h5 className="cardInfo">Quantity: {item.quantity}</h5>
           <h5 className="cardInfo">
-            Total price: ${item.price * item.cantidad}
+            Total price: ${item.price * item.quantity}
           </h5>
           <div id="cartButtonContainer">
             <button
