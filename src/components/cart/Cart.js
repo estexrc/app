@@ -3,7 +3,7 @@ import { useContexto } from "../../Context/myContext";
 import ItemCart from "./ItemCart";
 
 const Cart = () => {
-  const { cart, totalCount, deleteCart, clearCart, deleteOneProduct } =
+  const { cart, totalPrice, deleteCart, clearCart, deleteOneProduct } =
     useContexto();
 
   return (
@@ -15,13 +15,13 @@ const Cart = () => {
             key={desc.id}
             item={desc}
             deleteOneProduct={() => deleteOneProduct(desc)}
-            deleteCart={() => deleteCart(desc)}
+            deleteCart={() => deleteCart(desc, desc.cantidad, desc.price)}
           />
         ))}
 
         {cart.length > 0 ? (
           <div id="cartInfoFooter">
-            <p id="totalPrice">Total Count: ${totalCount} </p>
+            <p id="totalPrice">Total Count: ${totalPrice} </p>
             <div>
               <NavLink to={"/Payment"}>
                 <button className="bntCart">Buy</button>

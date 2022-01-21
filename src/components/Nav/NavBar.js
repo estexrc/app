@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useContexto } from "../../Context/myContext";
 
 const Navbar = ({ links }) => {
-  const { totalCount } = useContexto();
+  const { totalQuan } = useContexto();
 
   return (
     <header>
@@ -22,7 +22,7 @@ const Navbar = ({ links }) => {
             shopping_cart
           </span>
         </NavLink>
-        {totalCount > 0 && <div id="cartNumber"> {totalCount}</div>}
+        {totalQuan > 0 && <div id="cartNumber"> {totalQuan}</div>}
       </nav>
     </header>
   );
