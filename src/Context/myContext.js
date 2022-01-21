@@ -64,6 +64,7 @@ const CustomProvider = ({ children }) => {
     setCart,
     totalPrice,
     totalQuan,
+    setTotalQuan,
     addCartContext,
     deleteOneProduct,
     deleteCart,

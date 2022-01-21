@@ -9,7 +9,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 const Payment = () => {
-  const { cart, setCart, totalCount } = useContexto();
+  const { cart, setCart, setTotalQuan, totalPrice } = useContexto();
   const [buyer, setBuyer] = useState({
     name: "",
     lastName: "",
@@ -26,7 +26,7 @@ const Payment = () => {
       buyer: buyer,
       items: { ...cart },
       date: serverTimestamp(),
-      total: totalCount,
+      total: totalPrice,
     };
 
     const db = getFirestore();
@@ -40,6 +40,7 @@ const Payment = () => {
 
     setBuyer({ name: "", lastName: "", phoneNumber: "", email: "" });
     setCart([]);
+    setTotalQuan(0);
   };
 
   return (
