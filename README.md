@@ -6,7 +6,7 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 ## CARACTERÍSTICAS GENERALES
 
-- Se consume una base de datos alojada en FireBase y conformada con información proveniente de FakeStore API.
+- Se consume una base de datos alojada en Firebase y conformada con información proveniente de FakeStore API.
 - Los componentes se encuentran jerarquizados en función a la responsabilidad individual que se les asignó.
 - El contexto recibe y envía información para la gestión del carrito, ya sea en su cantidad o en el precio a través de estados individuales.
 - Los productos se encuentran agrupados en un catálogo general y luego divididos en categorías.
@@ -18,10 +18,10 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 ## HERRAMIENTAS
 
 ```sh
--React Js
--React Router DOM
--CSS 3
--Sweet Alert 2
--Firebase
--Fake Store API
+-React Js ✔️
+-React Router DOM ✔️
+-CSS 3 ✔️
+-Sweet Alert 2 ✔️
+-Firebase ✔️
+-Fake Store API ✔️
 ```
