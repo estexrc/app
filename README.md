@@ -70,9 +70,10 @@ Cuando la solicitud del usuario supera el stock del producto se notificará con 
 
 Auguadra Esteban
 
-[linkedin](https://www.linkedin.com/in/eauguadra/)
+[linkedin](https://www.linkedin.com/in/eauguadra)
 
 Eauguadra@gmail.com
 
-[github](https://github.com/estexrc)
 ```
+
+[github](https://github.com/estexrc)
