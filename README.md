@@ -17,9 +17,11 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 ## HERRAMIENTAS
 
-- React Js ✔️
-- React Router DOM ✔️
-- CSS 3 ✔️
-- Sweet Alert 2 ✔️
-- Firebase ✔️
-- Fake Store API ✔️
+`- React Js ✔️`
+`- React Router DOM ✔️`
+`- CSS 3 ✔️`
+`- Sweet Alert 2 ✔️`
+`- Firebase ✔️`
+`- Fake Store API ✔️`
+
+## FUTUROS CAMBIOS / AGREGADOS
