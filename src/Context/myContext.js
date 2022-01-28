@@ -58,7 +58,6 @@ const CustomProvider = ({ children }) => {
     setTotalPrice(0);
     setTotalQuan(0);
   };
-  console.log(totalPrice, totalQuan);
   const valorDelContexto = {
     cart,
     setCart,
