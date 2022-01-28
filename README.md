@@ -63,3 +63,16 @@ Cuando la solicitud del usuario supera el stock del producto se notificará con 
 > Levantar el proyecto en netlify
 
 > Traducción de README
+
+## AUTOR
+
+```sh
+
+<img src="./public/assets/readme/pe.png" /> Auguadra Esteban
+
+https://www.linkedin.com/in/eauguadra/
+
+Eauguadra@gmail.com
+
+https://github.com/estexrc
+```
