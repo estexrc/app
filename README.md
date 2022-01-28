@@ -70,7 +70,7 @@ Cuando la solicitud del usuario supera el stock del producto se notificará con 
 
 Auguadra Esteban
 
-https://www.linkedin.com/in/eauguadra/
+<a href="https://www.linkedin.com/in/eauguadra/">Linkedin</a>
 
 Eauguadra@gmail.com
 
