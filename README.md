@@ -6,17 +6,23 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 ## FUNCIONALIDADES
 
-> El carrito cuenta con los botones necesarios para modificar la compra:
-> Con "Delete 1" se elimina 1 unidad del producto tanto en el item cart como en el widget y el precio total,
-> mientras que con "Delete All" se eliminan todas las unidades de dicho producto e impacta en todos los indicadores antes mencionados.
+```sh
+El carrito cuenta con los botones necesarios para modificar la compra:
+Con "Delete 1" se elimina 1 unidad del producto tanto en el item cart como en el widget y el precio total,
+mientras que con "Delete All" se eliminan todas las unidades de dicho producto e impacta en todos los indicadores antes mencionados.
+```
 
 <img src="./public/assets/readme/buttons.gif" width="500"/>
 
-> Si el usuario quisiera dejar el contador el 0 la siguiente alerta aparece inmediatamente
+```sh
+Si el usuario quisiera dejar el contador el 0 la siguiente alerta aparece inmediatamente
+```
 
 <img src="./public/assets/readme/minimo.png" width="500"/>
 
-> Cuando la solicitud del usuario supera el stock del producto se notificará con un alerta de stock
+```sh
+Cuando la solicitud del usuario supera el stock del producto se notificará con un alerta de stock
+```
 
 <img src="./public/assets/readme/maximo.png" width="500"/>
 
@@ -42,19 +48,16 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 ## FUTUROS CAMBIOS / AGREGADOS
 
-```sh
-.Habilitar chat para consultas por parte de los clientes que se alojará en DB
+> Habilitar chat para consultas por parte de los clientes que se alojará en DB
 
-.Login con Auth de firebase
+> Login con Auth de firebase
 
-.Carrito alojado en LocalStorage
+> Carrito alojado en LocalStorage
 
-.Trabajar con stock en tiempo real
+> Trabajar con stock en tiempo real
 
-.Hacer responsive la app
+> Hacer responsive la app
 
-.Levantar el proyecto en netlify
+> Levantar el proyecto en netlify
 
-.Traducción de README
-
-```
+> Traducción de README
