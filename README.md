@@ -1,15 +1,5 @@
-# My first React App
+# My Store - ReactJs
 
-This project was my first experience with this technology, my partners and me work together for make the best experience possible.
+My Store es una tienda online desarrollada íntegramente en ReactJs y creada como proyecto final del curso brindado por CoderHouse.
 
-### Style editors
-
-*CSS 3
-
-### Information consume 
-
-*Mock API and own Json (at the moment), we use FireBase in the future
-
-
-
-
+<img src="https://drive.google.com/file/d/1KAFbodXZQHVoveuEfYOW3vMYFv7s9kYk/view?usp=sharing" />
