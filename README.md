@@ -6,6 +6,12 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 ## FUNCIONALIDADES
 
+> El carrito cuenta con los botones necesarios para modificar la compra:
+> Con "Delete 1" se elimina 1 unidad del producto tanto en el item cart como en el widget y el precio total,
+> mientras que con "Delete All" se eliminan todas las unidades de dicho producto e impacta en todos los indicadores antes mencionados.
+
+<img src="./public/assets/readme/buttons.png" width="700"/>
+
 > Si el usuario quisiera dejar el contador el 0 la siguiente alerta aparece inmediatamente
 
 <img src="./public/assets/readme/minimo.png" width="500"/>
