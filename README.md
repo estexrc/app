@@ -66,14 +66,10 @@ Cuando la solicitud del usuario supera el stock del producto se notificará con 
 
 ## AUTOR
 
-```sh
+<img src="./public/assets/readme/pe.png" /> Auguadra Esteban
 
-Auguadra Esteban
+<img src="./public/assets/readme/li.png" /> [Linkedin](https://www.linkedin.com/in/eauguadra)
 
-[linkedin](https://www.linkedin.com/in/eauguadra)
+<img src="./public/assets/readme/gm.png" /> Eauguadra@gmail.com
 
-Eauguadra@gmail.com
-
-```
-
-[github](https://github.com/estexrc)
+<img src="./public/assets/readme/gh.png" /> [Github](https://github.com/estexrc)
