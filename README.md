@@ -2,7 +2,7 @@
 
 My Store es una tienda online desarrollada íntegramente en ReactJs y creada como proyecto final del curso brindado por CoderHouse.
 
-<img src="" />
+<img src="./public/assets/MyStore.gif" />
 
 ## CARACTERÍSTICAS GENERALES
 
