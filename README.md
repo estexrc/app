@@ -8,7 +8,11 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 
 > Si el usuario quisiera dejar el contador el 0 la siguiente alerta aparece inmediatamente
 
-<img src="./public/assets/readme/minimo.gif" />
+<img src="./public/assets/readme/minimo.png" />
+
+> Cuando la solicitud del usuario supera el stock del producto se notificará con un alerta de stock
+
+<img src="./public/assets/readme/maximo.png" />
 
 ## CARACTERÍSTICAS GENERALES
 
