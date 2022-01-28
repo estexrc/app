@@ -15,13 +15,13 @@ const ItemDetail = ({ description }) => {
   };
   return (
     <>
-      <div id="card">
+      <div id="detailCard">
         <div className="cardContainer">
           <img src={description.img} alt="description" className="productImg" />
           <div className="infoContainer ">
             <h4 className="cardTitle">{description.name}</h4>
-            <h5 className="cardInfo">Price: ${description.price}</h5>
-            <h5 className="cardInfo">{description.descripcion}</h5>
+            <h5 className="cardInfo">{description.description}</h5>
+            <h5 className="cardPrice">Price: ${description.price}</h5>
             <ItemCount stock={description.stock} initial={1} onAdd={onAdd} />
           </div>
         </div>

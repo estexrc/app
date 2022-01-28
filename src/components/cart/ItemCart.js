@@ -7,7 +7,6 @@ const ItemCart = ({ item, deleteOneProduct, deleteCart }) => {
         <img src={item.img} alt="description" className="productImg" />
         <div className="infoContainer ">
           <h4 className="cardTitle">{item.name}</h4>
-          <h5 className="cardInfo">{item.description}</h5>
           <h5 className="cardInfo">Unity price: ${item.price}</h5>
           <h5 className="cardInfo">Quantity: {item.quantity}</h5>
           <h5 className="cardInfo">

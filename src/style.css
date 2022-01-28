@@ -51,28 +51,38 @@ a {
   justify-content: center;
   align-items: center;
 }
-#card {
+#card,
+#detailCard {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 90%;
   height: 40vh;
   padding: 10px;
-  margin: 7px;
+  margin: 2.5vh;
   margin-left: 4%;
   text-align: center;
   border-radius: 5px;
-  background-color: #48cae4;
-  box-shadow: #ade8f4 5px 5px;
+  background-color: #d2d6d8;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
-
+#detailCard {
+  height: 65vh;
+}
 .cardTitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  margin-bottom: 4vh;
 }
 .cardInfo {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 6px;
   font-style: italic;
+}
+.cardPrice {
+  font-size: 1.4rem;
+  margin: 4vh;
+  font-style: bold;
 }
 .productImg {
   width: 30%;
@@ -100,12 +110,13 @@ a {
   font-style: italic;
 }
 .bntCart {
-  width: 10vw;
+  width: 16vw;
   height: 7vh;
-  margin: 0 2vw;
+  margin: 5vh 2vw;
   border: none;
   border-radius: 5px;
-  background-color: #48cae4;
+  color: #fff;
+  background-color: #004d7c;
   font-size: 1.5rem;
 }
 .cartItem {
@@ -115,12 +126,12 @@ a {
   width: 90%;
   height: 40vh;
   padding: 10px;
-  margin: 7px;
+  margin: 2.5vh;
   margin-left: 4%;
   text-align: center;
   border-radius: 5px;
-  background-color: #48cae4;
-  box-shadow: #ade8f4 5px 5px;
+  background-color: #d2d6d8;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 #cartButtonContainer {
   height: 5vh;
@@ -130,8 +141,8 @@ a {
   height: 5vh;
   margin: 2vh 3vw;
   border-radius: 5px;
-  background-color: #ade8f4;
-  box-shadow: #48cae4;
+  background-color: #004d7c;
+  color: #fff;
   font-size: 1.6rem;
 }
 #cartInfoFooter {
@@ -198,20 +209,26 @@ a {
   width: 50%;
   margin-top: 1vh;
   height: 30%;
-  background-color: #ade8f4;
   border-radius: 5px;
 }
+.counter {
+  font-size: 1.4rem;
+}
 .bntContainer {
-  color: #48cae4;
-  background-color: transparent;
+  background-color: #004d7c;
+  color: #fff;
   margin: 0 2vw;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  width: 2.5vw;
+  height: 5vh;
+  border-radius: 15px;
 }
 .addCart {
   width: 50%;
   margin-top: 1vh;
-  height: 30%;
-  background-color: #ade8f4;
+  height: 5vh;
+  background-color: #004d7c;
+  color: #fff;
   border-radius: 5px;
   font-size: 1.4rem;
 }
