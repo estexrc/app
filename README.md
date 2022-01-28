@@ -68,7 +68,7 @@ Cuando la solicitud del usuario supera el stock del producto se notificará con 
 
 ```sh
 
-<img src="./public/assets/readme/pe.png" /> Auguadra Esteban
+Auguadra Esteban
 
 https://www.linkedin.com/in/eauguadra/
 
