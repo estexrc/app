@@ -10,7 +10,7 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 > Con "Delete 1" se elimina 1 unidad del producto tanto en el item cart como en el widget y el precio total,
 > mientras que con "Delete All" se eliminan todas las unidades de dicho producto e impacta en todos los indicadores antes mencionados.
 
-<img src="./public/assets/readme/buttons.gif" width="700"/>
+<img src="./public/assets/readme/buttons.gif" width="500"/>
 
 > Si el usuario quisiera dejar el contador el 0 la siguiente alerta aparece inmediatamente
 
