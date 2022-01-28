@@ -30,5 +30,7 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 Habilitar chat para consultas por parte de los clientes que se alojará en DB
 Login con Auth de firebase
 Carrito alojado en LocalStorage
+Trabajar con stock en tiempo real
+Hacer responsive la app
 Traducción de README
 ```
