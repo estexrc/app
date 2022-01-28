@@ -25,3 +25,10 @@ My Store es una tienda online desarrollada íntegramente en ReactJs y creada com
 - `Fake Store API` ✔️
 
 ## FUTUROS CAMBIOS / AGREGADOS
+
+```sh
+Habilitar chat para consultas por parte de los clientes que se alojará en DB
+Login con Auth de firebase
+Carrito alojado en LocalStorage
+Traducción de README
+```
